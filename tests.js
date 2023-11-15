@@ -56,3 +56,40 @@ describe(`isFive`, function () {
         expect(isFive('5')).toBe(true)
     });
 });
+describe(`isEven`, function () {
+    it('should be defined as a function', function () {
+        expect(typeof isEven).toBe(`function`)
+    });
+    it('should return a boolean no matter the input', function () {
+        expect(typeof isEven()).toBe(`boolean`)
+    });
+    it('should return true if input is Even', function () {
+        expect(isEven(2, -4, 8)).toBe(true)
+    });
+    it('should return false if input is Odd', function () {
+        expect(isEven(3)).toBe(false)
+    });
+    it('should return false if given a "string"', function () {
+        expect(isEven(`banana`)).toBe(false)
+    });
+    it('should return false if input is Infinity', function () {
+        expect(isEven(Infinity)).toBe(false)
+    });
+    it('return false when called with a boolean input like ', function () {
+        expect(isEven(true, false)).toBe(false)
+    });
+    it('returns false when called without an argument', function () {
+        expect(isEven()).toBe(false)
+    });
+});
+describe(`isVowel`, function () {
+    it('should be defined as a function', function() {
+        expect(typeof isVowel).toBe(`function`)
+    });
+    it('should return a boolean no matter the input', function () {
+        expect(typeof isVowel()).toBe(`boolean`)
+    });
+    it('should return true if Vowel is inputted', function () {
+        expect(typeof isVowel(`a`)).toBe(true)
+    });
+});
