@@ -11,6 +11,9 @@ function sayHello(personName) {
         return "Hello, Matteo!"
     }
 }
-function isFive(inputOfFive) {
-    return inputOfFive
+function isFive(input1) {
+    if (input1 === 5 || '5') {
+        return true
+    }
+    return typeof input === 'boolean'
 }
